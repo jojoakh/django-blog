@@ -1,0 +1,31 @@
+{% extends 'base.html' %}
+{% block content %}
+{% load static %}
+<div class="container mt-5">
+  <div class="row">
+    <div class="col-4 text-center">
+      <img src="{% static 'images/nobody.jpg' %}" width="75%" />
+    </div>
+    <div class="col-8">
+      <!-- Title goes between these h2 tags -->
+      <h2>About Semi</h2>
+
+      <!-- Content goes directly underneath this -->
+      Semi Akhigbe is a 34-year-old with a passion for learning and creating meaningful connections. An
+      avid reader, they find inspiration in both fiction and non-fiction, appreciating the depth and insight books bring
+      to their understanding of the world. Known for their analytical thinking and thoughtful approach, Semi
+      applies their skills to a variety of interests, balancing personal growth with a commitment to exploring new
+      perspectives. Driven by curiosity and a love for knowledge, they continue to expand their horizons in both life
+      and learning.
+      {{ about.content | safe }}
+    </div>
+  </div>
+  <div class="row">
+    <div class="col text-right">
+      <!-- Updated on field goes in here -->
+
+      <p class="text-end"><em>Updated on: {{ about.updated_on }}</em></p>
+    </div>
+  </div>
+</div>
+{% endblock content %}
